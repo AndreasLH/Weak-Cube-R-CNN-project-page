@@ -7,7 +7,7 @@
   <meta name="description" content="DESCRIPTION META TAG">
   <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
   <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <meta property="og:url" content="https://weakcubercnn.compute.dtu.dk/"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/image/your_banner_image.png" />
   <meta property="og:image:width" content="1200"/>
@@ -20,11 +20,11 @@
   <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="keywords" content="Weak Supervision, 3D Object Detection, Monocular Object Detection, weak cube rcnn, cube rcnn, 3D object detection, weakly supervised 3D object detection, 3D detection, monocular 3D object detection, computer vision, robotics, virtual reality, machine learning, deep learning, artificial intelligence, AI, computer vision research, image analysis, object recognition, depth estimation, orientation estimation, pseudo-ground truth, loss functions, foundation models, large-scale datasets">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
+  <title>Weak Cube R-CNN</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -52,21 +52,25 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">Weak Cube R-CNN: Weakly Supervised 3D Detection using only 2D Bounding Boxes</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Andreas Lau Hansen</a><sup>1</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Lukas Wanzeck</a><sup>1</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Dim P. Papadopoulos</a><sup>1,2</sup>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">Technical University of Denmark<br>
+
+                      23rd Scandinavian Conference on Image Analysis, SCIA 2025
+                      </span>
+                    <span class="eql-cntrb"><small><br><sup>1</sup>Technical University of Denmark</small>,</span>
+                    <span class="eql-cntrb"><small><sup>2</sup>Pioneer Centre for AI</small></span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -101,6 +105,17 @@
                       <i class="fab fa-github"></i>
                     </span>
                     <span>Code</span>
+                  </a>
+                </span>
+
+                  <!-- Huggingface link -->
+                  <span class="link-block">
+                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      🤗
+                    </span>
+                    <span>Hugging Face</span>
                   </a>
                 </span>
 
@@ -148,7 +163,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Monocular 3D object detection is an essential task in computer vision, and it has several applications in robotics and virtual reality. However, 3D object detectors are typically trained in a fully supervised way, relying extensively on 3D labeled data, which is labor-intensive and costly to annotate. This work focuses on weakly-supervised 3D detection to reduce data needs using a monocular method that leverages a singlecamera system over expensive LiDAR sensors or multi-camera setups. We propose a general model Weak Cube R-CNN, which can predict objects in 3D at inference time, requiring only 2D box annotations for training by exploiting the relationship between 2D projections of 3D cubes. Our proposed method utilizes pre-trained frozen foundation 2D models to estimate depth and orientation information on a training set. We use these estimated values as pseudo-ground truths during training. We design loss functions that avoid 3D labels by incorporating information from the external models into the loss. In this way, we aim to implicitly transfer knowledge from these large foundation 2D models without having access to 3D bounding box annotations. Experimental results on the SUN RGB-D dataset show increased performance in accuracy compared to an annotation time equalized <a href="https://garrickbrazil.com/omni3d/">Cube R-CNN baseline</a>. While not precise for centimetre-level measurements, this method provides a strong foundation for further research.
           </p>
         </div>
       </div>
@@ -263,9 +278,9 @@
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title">Poster</h2>
+      <h2 class="title">Paper</h2>
 
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+      <iframe  src="static/pdfs/weakcubercnn.pdf" width="100%" height="550">
           </iframe>
         
       </div>
