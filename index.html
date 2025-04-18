@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta name="description" content="Weak Cube R-CNN: Weakly Supervised 3D Detection using only 2D Bounding Boxes">
+  <meta property="og:title" content="Weak Cube R-CNN: Weakly Supervised 3D Detection using only 2D Bounding Boxes"/>
+  <meta property="og:description" content="We propose a general model Weak Cube R-CNN, which can predict objects in 3D at inference time, requiring only 2D box annotations for training by exploiting the relationship between 2D projections of 3D cubes. Our proposed method utilizes pre-trained frozen foundation 2D models to estimate depth and orientation information on a training set. We use these estimated values as pseudo-ground truths during training. We design loss functions that avoid 3D labels by incorporating information from the external models into the loss. In this way, we aim to implicitly transfer knowledge from these large foundation 2D models without having access to 3D bounding box annotations."/>
   <meta property="og:url" content="https://weakcubercnn.compute.dtu.dk/"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image" content="static/images/sun.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
 
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <meta name="twitter:title" content="Weak Cube R-CNN: Weakly Supervised 3D Detection using only 2D Bounding Boxes">
+  <meta name="twitter:description" content="We propose a general model Weak Cube R-CNN, which can predict objects in 3D at inference time, requiring only 2D box annotations for training by exploiting the relationship between 2D projections of 3D cubes. Our proposed method utilizes pre-trained frozen foundation 2D models to estimate depth and orientation information on a training set. We use these estimated values as pseudo-ground truths during training. We design loss functions that avoid 3D labels by incorporating information from the external models into the loss. In this way, we aim to implicitly transfer knowledge from these large foundation 2D models without having access to 3D bounding box annotations.">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:image" content="static/images/sun.png">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Keywords for your paper to be indexed by-->
   <meta name="keywords" content="Weak Supervision, 3D Object Detection, Monocular Object Detection, weak cube rcnn, cube rcnn, 3D object detection, weakly supervised 3D object detection, 3D detection, monocular 3D object detection, computer vision, robotics, virtual reality, machine learning, deep learning, artificial intelligence, AI, computer vision research, image analysis, object recognition, depth estimation, orientation estimation, pseudo-ground truth, loss functions, foundation models, large-scale datasets">
@@ -56,11 +56,11 @@
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Andreas Lau Hansen</a><sup>1</sup>,</span>
+                <a href="https://www.linkedin.com/in/andreaslh/" target="_blank">Andreas Lau Hansen</a><sup>1</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Lukas Wanzeck</a><sup>1</sup>,</span>
+                  <a href="https://www.linkedin.com/in/lukas-wanzeck/" target="_blank">Lukas Wanzeck</a><sup>1</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Dim P. Papadopoulos</a><sup>1,2</sup>
+                    <a href="https://orbit.dtu.dk/en/persons/dimitrios-papadopoulos" target="_blank">Dim P. Papadopoulos</a><sup>1,2</sup>
                   </span>
                   </div>
 
@@ -86,20 +86,9 @@
                       </a>
                     </span>
 
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/weak-cube-rcnn" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -110,7 +99,7 @@
 
                   <!-- Huggingface link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://huggingface.co/weak-cube-rcnn" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       🤗
@@ -138,6 +127,92 @@
 </section>
 
 
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <img src="static/images/Fig1_v3.png" alt="Figure 1" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section></section>
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Monocular 3D object detection is an essential task in computer vision, and it has several applications in robotics and virtual reality. However, 3D object detectors are typically trained in a fully supervised way, relying extensively on 3D labeled data, which is labor-intensive and costly to annotate. This work focuses on weakly-supervised 3D detection to reduce data needs using a monocular method that leverages a single-camera system over expensive LiDAR sensors or multi-camera setups. We propose a general model Weak Cube R-CNN, which can predict objects in 3D at inference time, requiring only 2D box annotations for training by exploiting the relationship between 2D projections of 3D cubes. Our proposed method utilizes pre-trained frozen foundation 2D models to estimate depth and orientation information on a training set. We use these estimated values as pseudo-ground truths during training. We design loss functions that avoid 3D labels by incorporating information from the external models into the loss. In this way, we aim to implicitly transfer knowledge from these large foundation 2D models without having access to 3D bounding box annotations. Experimental results on the SUN RGB-D dataset show increased performance in accuracy compared to an annotation time equalized <a href="https://garrickbrazil.com/omni3d/"><u>Cube R-CNN baseline</u></a>. While not precise for centimetre-level measurements, this method provides a strong foundation for further research.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Model overview</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <img src="static/images/Fig2_v3.png" alt="Figure 1" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section></section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Pipeline Overview</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <img src="static/images/pipeline.png" alt="Figure 1" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section></section>
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/sun.png" alt="sun rgbd results"/>
+        <h2 class="subtitle has-text-centered">
+          Qualitative examples of Weak Cube R-CNN predictions on <b>SUN-RGBD</b> test set. Images are selected to showcase behaviour in various scenarios. Only the last row is shown with ground truths in red to avoid clutter. In the last row ground truths are shown in red with predictions in green. Each image is shown side-by-side with its corresponding top-view image, where each square is 1x1 m.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/kitti.png" alt="kitti results"/>
+        <h2 class="subtitle has-text-centered">
+          Qualitative examples of Weak Cube R-CNN predictions on <b>KITTI</b> test set. KITTI predictions are shown in green and ground truth in red. Each image is shown with its corresponding top-view image, where each square is 1x1 m.
+        </h2>
+      </div>
+      </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
 <!-- Teaser video-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
@@ -154,66 +229,6 @@
   </div>
 </section>
 <!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Monocular 3D object detection is an essential task in computer vision, and it has several applications in robotics and virtual reality. However, 3D object detectors are typically trained in a fully supervised way, relying extensively on 3D labeled data, which is labor-intensive and costly to annotate. This work focuses on weakly-supervised 3D detection to reduce data needs using a monocular method that leverages a singlecamera system over expensive LiDAR sensors or multi-camera setups. We propose a general model Weak Cube R-CNN, which can predict objects in 3D at inference time, requiring only 2D box annotations for training by exploiting the relationship between 2D projections of 3D cubes. Our proposed method utilizes pre-trained frozen foundation 2D models to estimate depth and orientation information on a training set. We use these estimated values as pseudo-ground truths during training. We design loss functions that avoid 3D labels by incorporating information from the external models into the loss. In this way, we aim to implicitly transfer knowledge from these large foundation 2D models without having access to 3D bounding box annotations. Experimental results on the SUN RGB-D dataset show increased performance in accuracy compared to an annotation time equalized <a href="https://garrickbrazil.com/omni3d/">Cube R-CNN baseline</a>. While not precise for centimetre-level measurements, this method provides a strong foundation for further research.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
 
 <!-- Youtube video -->
 <section class="hero is-small is-light">
@@ -280,7 +295,7 @@
     <div class="container">
       <h2 class="title">Paper</h2>
 
-      <iframe  src="static/pdfs/weakcubercnn.pdf" width="100%" height="550">
+      <iframe  src="static/pdfs/weakcubercnn.pdf" width="100%" height="800">
           </iframe>
         
       </div>
@@ -293,7 +308,12 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@inproceedings{alh2025weakcubercnn,
+        title={Weak Cube R-CNN: Weakly Supervised 3D Detection using only 2D Bounding Boxes},
+        author={Andreas Lau Hansen and Lukas Wanzeck and Dim P. Papadopoulos},
+        year={2025},
+        booktitle={Proceedings of the 23rd Scandinavian Conference on Image Analysis (SCIA)},
+        }</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
@@ -306,7 +326,7 @@
         <div class="content">
 
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
             You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
